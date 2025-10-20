@@ -17,3 +17,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: 'true'
+
+algasensors:
+  temperature-monitoring:
+    url: http://localhost:8082

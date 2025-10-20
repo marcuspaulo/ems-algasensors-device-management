@@ -21,6 +21,11 @@ public class RestClientFactory {
         this.baseUrl = baseUrl;
     }
 
+    /**
+     * Dica: Criar a instância customizada, ao invés de usar apenas o create.
+     * Nesse caso, teria um problema com o Jackson(Serializer e Deserializer)
+     * @return RestClient
+     */
     public RestClient temperatureMonitoringRestClient() {
         return restClientBuilder.baseUrl(baseUrl)
                 .requestFactory(generateClientHttpRequestFactory())
